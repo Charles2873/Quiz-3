@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Positive Or Negative</title>
+   <link href="stylepage.css" rel="stylesheet"/>
+</head>
+<script>
+    function checkNumber() {
+        // Get the input element's value
+        const number = parseFloat(document.getElementById('numberInput').value);
+
+        // Check if the number is positive, negative, or zero
+        let result;
+        if (isNaN(number)) {
+            result = "Please enter a valid number.";
+        } else if (number > 0) {
+            result = "Positive";
+        } else if (number < 0) {
+            result = "Negative";
+        } else {
+            result = "Zero";
+        }
+
+        // Display the result
+        document.getElementById('result').textContent = `${result}`;
+    }
+</script>
+<body>
+    <div class="container">
+        <div class="text-white">
+        <h3><label for="numberInput">Enter a Number</label></h3>
+        </div>
+    
+        <div class="text-white">
+        <input type="number" id="numberInput" required="">
+        </div>
+        <br>
+        <div class="text-whiter">
+        <button type="button" onclick="checkNumber()">Check</button>
+        </div>
+    
+    
+    <br>
+    
+    <div class="text-white">
+    <h3 id="result"></h3>
+    </div>
+</div>
+    <p>Submitted by: Charles Bhambhani</p>
+    <a href="index.html">Back to Choices</a>
+</body>
+</html>
